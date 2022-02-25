@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Welcome
 subtitle: ''
-description: ''
+description: '技术源于生活'
 keywords:
-author: John Doe
-language: en
+author: zou liang
+language: cn
 timezone: ''
 
 # URL
