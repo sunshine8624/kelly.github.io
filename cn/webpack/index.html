@@ -478,25 +478,25 @@
 <li>
 <p>将JS转义成低版本的</p>
 <blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// JS代码向低版本转换，我们需要使用 babel-loader 首先安装一下 babel-loader</span></span><br><span class="line">npm install babel-loader -D</span><br><span class="line"><span class="comment">// 相应的文件配置 在上面的 解锁WebPack中</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> // JS代码向低版本转换，我们需要使用 babel-loader 首先安装一下 babel-loader</span><br><span class="line">npm install babel-loader -D</span><br><span class="line">// 相应的文件配置 在上面的 解锁WebPack中</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li>
 <p>图片/字体文件处理</p>
 <blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我们可以使用 url-loader 或者 file-loader 来处理本地的资源文件。url-loader 和 file-loader 的功能类似，但是 url-loader 可以指定在文件大小小于指定的限制时，返回 DataURL，因此，个人会优先选择使用 url-loader</span></span><br><span class="line">npm install url-loader -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 我们可以使用 url-loader 或者 file-loader 来处理本地的资源文件。url-loader 和 file-loader 的功能类似，但是 url-loader 可以指定在文件大小小于指定的限制时，返回 DataURL，因此，个人会优先选择使用 url-loader</span><br><span class="line">npm install url-loader -D</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li>
 <p>如何处理样式文件</p>
 <blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack 不能直接处理 css，需要借助 loader。如果是 .css，我们需要的 loader</span></span><br><span class="line">npm install style-loader less-loader css-loader postcss-loader autoprefixer less -D</span><br><span class="line"></span><br><span class="line"><span class="comment">// 简单说一下的配置：</span></span><br><span class="line">style-loader 动态创建 style 标签，将 css 插入到 head 中.</span><br><span class="line"></span><br><span class="line">css-loader 负责处理 @<span class="keyword">import</span> 等语句。导入css模块，对css代码进行编译和处理</span><br><span class="line"></span><br><span class="line">postcss-loader 和 autoprefixer，自动生成浏览器兼容性前缀了，应该没人去自己徒手去写浏览器前缀了吧</span><br><span class="line"></span><br><span class="line">less-loader 负责处理编译 .less 文件,将其转为 css</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// webpack 不能直接处理 css，需要借助 loader。如果是 .css，我们需要的 loader</span><br><span class="line">npm install style-loader less-loader css-loader postcss-loader autoprefixer less -D</span><br><span class="line"></span><br><span class="line">// 简单说一下的配置：</span><br><span class="line">style-loader 动态创建 style 标签，将 css 插入到 head 中.</span><br><span class="line"></span><br><span class="line">css-loader 负责处理 @import 等语句。导入css模块，对css代码进行编译和处理</span><br><span class="line"></span><br><span class="line">postcss-loader 和 autoprefixer，自动生成浏览器兼容性前缀了，应该没人去自己徒手去写浏览器前缀了吧</span><br><span class="line"></span><br><span class="line">less-loader 负责处理编译 .less 文件,将其转为 css</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li>
 <p>处理 html 中的本地图片</p>
 <blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装 html-withimg-loader 来解决咯。</span></span><br><span class="line"></span><br><span class="line">npm install html-withimg-loader -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 安装 html-withimg-loader 来解决咯。</span><br><span class="line"></span><br><span class="line">npm install html-withimg-loader -D</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li>
