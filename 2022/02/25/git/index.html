@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Git | Welcome</title><meta name="author" content="zou liang"><meta name="copyright" content="zou liang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="*代码管理 ——* Git基础  Git工作原理 1、Workspace:工作区，执行git add *命令就把改动提交到了暂存区，执行git pull命令将远程仓库的数据拉到当前分支并合并，执行git checkout [branch-name]切换分支。 2、Index:暂存区，执行git commit -m ‘说明’ 命令就把改动提交到了仓库区（当前分支）。 3、Repository:仓库区">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://example.com/2022/02/25/git/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="*代码管理 ——* Git基础  Git工作原理 1、Workspace:工作区，执行git add *命令就把改动提交到了暂存区，执行git pull命令将远程仓库的数据拉到当前分支并合并，执行git checkout [branch-name]切换分支。 2、Index:暂存区，执行git commit -m ‘说明’ 命令就把改动提交到了仓库区（当前分支）。 3、Repository:仓库区">
+<meta property="og:locale">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-02-25T07:41:46.040Z">
+<meta property="article:modified_time" content="2022-02-25T07:45:29.838Z">
+<meta property="article:author" content="zou liang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/02/25/git/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Git',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-25 15:45:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Welcome</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-25T07:41:46.040Z" title="Created 2022-02-25 15:41:46">2022-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-25T07:45:29.838Z" title="Updated 2022-02-25 15:45:29">2022-02-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Git"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong><em>*代码管理 ——*</em> Git基础</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/OtuoacnwftQiayAzfTeoOKz9MRLLsEBicOYxnviakXcOVk8DJhdLic4xPWrBq0Gj43GWQahwyoQg0jhsLT3FgZo6Fg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>Git工作原理</p>
+<p>1、<strong>Workspace:工作区</strong>，执行git add *命令就把改动提交到了暂存区，执行git pull命令将远程仓库的数据拉到当前分支并合并，执行git checkout [branch-name]切换分支。</p>
+<p>2、<strong>Index:暂存区</strong>，执行git commit -m ‘说明’ 命令就把改动提交到了仓库区（当前分支）。</p>
+<p>3、<strong>Repository:仓库区</strong>（或本地仓库），执行git push origin master提交到远程仓库，执行git clone 地址将克隆远程仓库到本地。</p>
+<p>4、<strong>Remote:远程仓库</strong>，就是类似github，coding等网站所提供的仓库。</p>
+<p>Git显著优点就是<strong>版本的分支（branch）和合并（merge）</strong>十分方便。</p>
+<p>github主要提供基于git的版本托管服务</p>
+<p>git下载：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads/">https://git-scm.com/downloads/</a></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/MXzNlnO3ib9Pxeun9OEYicdJiclWq5Tn0dD4YSLR3ic3bPoSuIUfoksbYibxWuC2VB7VuDNtkicpk5ibnrYnQ6oT6rooA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>**代码管理 —— Git与svn区别</p>
+<p>**</p>
+<p><strong>git分布式版本控制</strong></p>
+<p>优点：1) 本地提交，在本地可以提交，创建分支，代码回滚。2) 每台开发机都是完整的仓库，便于恢复。</p>
+<p>缺点：1) 缺乏对文件的权限控制。2) 学习相对复杂。</p>
+<p>git commit 不需要网络，git push需要联网</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/OtuoacnwftSMkf8nTw9mcCS8svYeJWcMlpVqliaNtz2VrFTX3kWI8vWnN2ATjunWn0O1HEMkjS8vllNHQo5wn0Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>「<del>git流程图</del>」</p>
+<p><strong>svn集中式版本控制</strong></p>
+<p>优点：1) 权限精细管理。2) 统一管理，概念简单</p>
+<p>缺点：1) 中央服务器宕机机，则无法提交代码。2) 中央服务器故障会引起无法提交乃至历史记录全部丢失。</p>
+<p>集中式版本控制系统最大的毛病就是必须联网才能工作</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/OtuoacnwftSMkf8nTw9mcCS8svYeJWcMR8kU9VibgVoibM8G4OSwowKmsz5xAqO0lVqQIGicLU7l1QpSvJA5LgFibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>「<del>svn流程图</del>」</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/MXzNlnO3ib9Pxeun9OEYicdJiclWq5Tn0dD4YSLR3ic3bPoSuIUfoksbYibxWuC2VB7VuDNtkicpk5ibnrYnQ6oT6rooA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>**代码管理 —— 常用git命令</p>
+<p>**</p>
+<p>新建代码库</p>
+<p># 在当前目录新建一个Git代码库 </p>
+<p>$ git init </p>
+<p># 新建一个目录，将其初始化为Git代码库 </p>
+<p>$ git init [project-name] </p>
+<p># 下载一个项目和它的整个代码历史 </p>
+<p>$ git clone [url]</p>
+<p>配置</p>
+<p># 设置提交代码时的用户信息</p>
+<p>$ git config –global user.name “yourname”  &#x2F;&#x2F; 设置用户名</p>
+<p>$ git config –global user.email <a href="mailto:&#x6d;&#121;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#109;">&#x6d;&#121;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#109;</a> &#x2F;&#x2F; 设置用户邮箱</p>
+<p># 编辑Git配置文件 </p>
+<p>$ git config -e [–global]</p>
+<p># 显示当前的Git配置</p>
+<p>$ git config –list  &#x2F;&#x2F; 查看git设置列表信息</p>
+<p>本地分支修改操作：</p>
+<p>1、git checkout .    #本地所有修改回到原来的状态</p>
+<p>2、$ git checkout – app&#x2F;index.html  #本地个别修改恢复。</p>
+<p>命令行窗口没有关掉时（时光穿梭）</p>
+<p>git log 查看历史</p>
+<p>git reflog  查看命令历史，以便确定要回到未来的哪个版本。</p>
+<p>恢复上一个版本  （ git reflog ）</p>
+<p>git reset –hard 3628164</p>
+<p>保存改动</p>
+<p>git  stash   删除并保存改动</p>
+<p>git  stash pop   恢复代码</p>
+<p>修正提交最后一个 commit 消息</p>
+<p>git commit –amend 或 git commit –amend -m “Fixes bug #42”</p>
+<p>提交master后，如何处理</p>
+<p>git push -f 命令去强制提交 （强行推送到远端）（不建议使用）</p>
+<p>注：如果已经提交master分支，建议本地分支进行修改，重新提交。</p>
+<p>删除远程分支</p>
+<p>git fetch -p  本地删除远程已经删除的分支显示</p>
+<p>git branch -a  用来查看远程分支</p>
+<p>git push origin :feature&#x2F;construction   删除远程分支</p>
+<p>改下远程仓库push地址</p>
+<p>git remote -v 查看现有远程仓库的地址url</p>
+<p>\1. 修改命令</p>
+<p>git remote set-url origin <URL> 更换远程仓库地址。把<URL>更换为新的url地址。</p>
+<p>2､添加命令</p>
+<p>git remote add jt <a target="_blank" rel="noopener" href="https://github.com/TheChalice/OCManagerUI/invitation">https://github.com/TheChalice/OCManagerUI/invitation</a></p>
+<p>删除node_modules文件夹</p>
+<p>rm -rf node_modules&#x2F;</p>
+<p>wq保存并退出</p>
+<p>（ shift+:） esc定位当前位置</p>
+<p>Git仓库完整迁移 （注：新的git地址，需要建个分支）</p>
+<p>\1. 随便找个文件夹，从原地址克隆一份裸版本库</p>
+<p>git clone –bare 旧的git地址</p>
+<p>\2. 推送裸版本库到新的地址</p>
+<p>cd xxx.git git push –mirror 新的git地址</p>
+<p>Git鼓励大量使用分支</p>
+<p>查看分支：git branch</p>
+<p>创建分支：git branch <name></p>
+<p>切换分支：git checkout <name></p>
+<p>创建+切换分支：git checkout -b <name></p>
+<p>合并某分支到当前分支：git merge <name></p>
+<p>删除分支：git branch -d <name></p>
+<p>取消一个目录的git初始化</p>
+<p>执行rm -rf .git</p>
+<p>查看详细的commit信息</p>
+<p>git show 2e21737</p>
+<h3 id="git-rebase和git-merge"><a href="#git-rebase和git-merge" class="headerlink" title="git rebase和git merge"></a>git rebase和git merge</h3><p>rebase 的概念&#x2F;作用其实很简单——就是「变基」。具体来说，就是改变一条分支的「基点」，使原分支从指定的地方（commit）重新长出来。rebase 可以保证commit为一条线。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz/OtuoacnwftSMkf8nTw9mcCS8svYeJWcMeAeKoKibuaTOwK89iabbxQavwHn5axFadmcoq62W08WtG8PRUpwuVEyg/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz/OtuoacnwftSMkf8nTw9mcCS8svYeJWcMyLoSfTBjeTskqXVs5wsjyHqmOfl5kbsAd0C0EmENQyvP3cLKGeQ95g/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>注：git log –graph 提交记录的顺序问题</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/MXzNlnO3ib9Pxeun9OEYicdJiclWq5Tn0dD4YSLR3ic3bPoSuIUfoksbYibxWuC2VB7VuDNtkicpk5ibnrYnQ6oT6rooA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>**<em>*代码管理 ——*</em> 开发上线流程</p>
+<p>**</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/OtuoacnwftQiayAzfTeoOKz9MRLLsEBicOo9d4N2pyAYqQDz5CK4ED77JHrX1Hp4FvZHFoCRRCQXzewjxqancqXg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/MXzNlnO3ib9Pxeun9OEYicdJiclWq5Tn0dD4YSLR3ic3bPoSuIUfoksbYibxWuC2VB7VuDNtkicpk5ibnrYnQ6oT6rooA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>**代码管理 —— 遇到的坑</p>
+<p>**1、建议在代码提交之前先git merge develop 与develop进行同步。（减少冲突）</p>
+<p>2、如果merge不成功，说明你的代码与别人的代码冲突了。需要怎么搞呢？</p>
+<p>   1）首先git status 查看本地代码修改情况。</p>
+<p>   2）通过以下命令，删除与恢复代码。</p>
+<p>​        git stash  删除并保存改动</p>
+<p>​        git  stash pop   恢复改动</p>
+<p>​    注：用这个操作，一般都处理 merge不成功的问题。</p>
+<p>3、git push -f 命令去强制提交 （强行推送到远端）（不建议使用）</p>
+<p>4、<strong>git fetch 和git pull 的差别</strong></p>
+<p>\1) git fetch 相当于是从远程获取最新到本地，不会自动merge</p>
+<p>\2) git pull：相当于是从远程获取最新版本并merge到本地</p>
+<p>注：git pull是git fetch和git merge两个步骤的结合。</p>
+<p>5、git 报错  gitThere is no tracking information for the current branch.</p>
+<p>是因为本地分支和远程分支没有建立联系</p>
+<p>git branch –set-upstream-to&#x3D;origin&#x2F;远程分支的名字 本地分支的名字</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/MXzNlnO3ib9Pxeun9OEYicdJiclWq5Tn0dD4YSLR3ic3bPoSuIUfoksbYibxWuC2VB7VuDNtkicpk5ibnrYnQ6oT6rooA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>代码管理 —— 忽略特定的文件</strong></p>
+<p>**<br>**</p>
+<p>可以配置Git忽略特定的文件或者是文件夹。这些配置都放在.gitignore文件中。</p>
+<p>下面我们看看常用的规则：</p>
+<p>1）node_modules&#x2F;  过滤整个文件夹</p>
+<p>2）*.zip           过滤所有.zip文件</p>
+<p>3）&#x2F;mtk&#x2F;do.c      过滤某个具体文件</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">zou liang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/02/25/git/">http://example.com/2022/02/25/git/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/25/webPack/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">webPackBase</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zou liang</div><div class="author-info__description">技术源于生活</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-rebase%E5%92%8Cgit-merge"><span class="toc-number">1.</span> <span class="toc-text">git rebase和git merge</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/25/git/" title="Git"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git"/></a><div class="content"><a class="title" href="/2022/02/25/git/" title="Git">Git</a><time datetime="2022-02-25T07:41:46.040Z" title="Created 2022-02-25 15:41:46">2022-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/25/webPack/" title="webPackBase"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="webPackBase"/></a><div class="content"><a class="title" href="/2022/02/25/webPack/" title="webPackBase">webPackBase</a><time datetime="2022-02-25T07:26:53.491Z" title="Created 2022-02-25 15:26:53">2022-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/25/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/02/25/hello-world/" title="Hello World">Hello World</a><time datetime="2022-02-25T05:40:56.238Z" title="Created 2022-02-25 13:40:56">2022-02-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By zou liang</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
