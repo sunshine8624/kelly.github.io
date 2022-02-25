@@ -37,7 +37,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/cn/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://yoursite-url/cn/webpack/</loc>
     
     <lastmod>2020-04-16</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://yoursite-url/tags/webpack/</loc>
     <lastmod>2022-02-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -90,7 +90,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://yoursite-url/categories/webpack/</loc>
     <lastmod>2022-02-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
