@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>webPackBase | Welcome</title><meta name="author" content="zou liang"><meta name="copyright" content="zou liang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[TOC] webpack基础知识点 解锁 Webpack 重点 webPack 相应知识点的(相应的配置都在 解锁 Webpack 重点中 ) 将JS转义成低版本的   123 &#x2F;&#x2F; JS代码向低版本转换，我们需要使用 babel-loader 首先安装一下 babel-loadernpm install babel-loader -D&#x2F;&#x2F; 相应的文件配置 在上面的 解锁WebPack中   图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webPackBase">
+<meta property="og:url" content="http://example.com/2022/02/25/webPack/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="[TOC] webpack基础知识点 解锁 Webpack 重点 webPack 相应知识点的(相应的配置都在 解锁 Webpack 重点中 ) 将JS转义成低版本的   123 &#x2F;&#x2F; JS代码向低版本转换，我们需要使用 babel-loader 首先安装一下 babel-loadernpm install babel-loader -D&#x2F;&#x2F; 相应的文件配置 在上面的 解锁WebPack中   图">
+<meta property="og:locale">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-02-25T07:26:53.491Z">
+<meta property="article:modified_time" content="2022-02-25T07:29:27.112Z">
+<meta property="article:author" content="zou liang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/02/25/webPack/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'webPackBase',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-25 15:29:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Welcome</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">webPackBase</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-25T07:26:53.491Z" title="Created 2022-02-25 15:26:53">2022-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-25T07:29:27.112Z" title="Updated 2022-02-25 15:29:27">2022-02-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="webPackBase"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>[TOC]</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ub4y1Z7Mx?from=search&seid=4918705768939279631&spm_id_from=333.337.0.0">webpack基础知识点</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzI5MTUyMjk0Mw==&mid=2247484844&idx=1&sn=cc63698437613a2d4872a738e3e1cf30&chksm=ec0e15bcdb799caa596532a64b9b440aca9c13bfaee4deef6b029fbfa516580cbf4ee6c40948&scene=21#wechat_redirect">解锁 Webpack 重点</a></p>
+<h4 id="webPack-相应知识点的-相应的配置都在-解锁-Webpack-重点中"><a href="#webPack-相应知识点的-相应的配置都在-解锁-Webpack-重点中" class="headerlink" title="webPack 相应知识点的(相应的配置都在 解锁 Webpack 重点中 )"></a>webPack 相应知识点的(相应的配置都在 解锁 Webpack 重点中 )</h4><ul>
+<li><p>将JS转义成低版本的 </p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> // JS代码向低版本转换，我们需要使用 babel-loader 首先安装一下 babel-loader</span><br><span class="line">npm install babel-loader -D</span><br><span class="line">// 相应的文件配置 在上面的 解锁WebPack中</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>图片&#x2F;字体文件处理</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 我们可以使用 url-loader 或者 file-loader 来处理本地的资源文件。url-loader 和 file-loader 的功能类似，但是 url-loader 可以指定在文件大小小于指定的限制时，返回 DataURL，因此，个人会优先选择使用 url-loader</span><br><span class="line">npm install url-loader -D</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>如何处理样式文件</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// webpack 不能直接处理 css，需要借助 loader。如果是 .css，我们需要的 loader</span><br><span class="line">npm install style-loader less-loader css-loader postcss-loader autoprefixer less -D</span><br><span class="line"></span><br><span class="line">// 简单说一下的配置：</span><br><span class="line">style-loader 动态创建 style 标签，将 css 插入到 <span class="built_in">head</span> 中.</span><br><span class="line"></span><br><span class="line">css-loader 负责处理 @import 等语句。导入css模块，对css代码进行编译和处理</span><br><span class="line"></span><br><span class="line">postcss-loader 和 autoprefixer，自动生成浏览器兼容性前缀了，应该没人去自己徒手去写浏览器前缀了吧</span><br><span class="line"></span><br><span class="line">less-loader 负责处理编译 .less 文件,将其转为 css</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>处理 html 中的本地图片</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 安装 html-withimg-loader 来解决咯。</span><br><span class="line"></span><br><span class="line">npm install html-withimg-loader -D</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>抽离公共代码</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 抽离公共代码是对于多页应用来说的，如果多个页面引入了一些公共模块，那么可以把这些公共的模块抽离出来，单独打包。公共代码只需要下载一次就缓存起来了，避免了重复下载 optimization.splitChunks</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><h4 id="happypack"><a href="#happypack" class="headerlink" title="happypack"></a>happypack</h4><blockquote>
+<p>由于有大量文件需要解析和处理，构建是文件读写和计算密集型的操作，特别是当文件数量变多后，Webpack 构建慢的问题会显得严重。文件读写和计算操作是无法避免的，那能不能让 Webpack 同一时刻处理多个任务，发挥多核 CPU 电脑的威力</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// HappyPack 就能让 Webpack 做到这点，它把任务分解给多个子进程去并发的执行，子进程处理完后再把结果发送给主进程</span><br><span class="line">npm install happypack -D</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<h4 id="webPack中laoder对css的处理"><a href="#webPack中laoder对css的处理" class="headerlink" title="webPack中laoder对css的处理"></a>webPack中laoder对css的处理</h4><h6 id="Loader-的作用-模块转换器，将非JS模块转化为webPack能识别的JS模块"><a href="#Loader-的作用-模块转换器，将非JS模块转化为webPack能识别的JS模块" class="headerlink" title="Loader 的作用: 模块转换器，将非JS模块转化为webPack能识别的JS模块"></a>Loader 的作用: 模块转换器，将非JS模块转化为webPack能识别的JS模块</h6><p> 本质上，webPack loader将所有类型的文件，转换成应用程序的依赖图 可以直接引用的模块</p>
+<h6 id="Piugin"><a href="#Piugin" class="headerlink" title="Piugin"></a>Piugin</h6><p>扩展插件，webPack运行的各个阶段，都会广播出对应的事件，插件去监听对应的事件</p>
+<blockquote>
+<p>webPack中操作css需要两个关键的loader: css-loader和style- loader</p>
+<ul>
+<li>css-loader：导入css模块、对css代码进行编译处理</li>
+<li>style- loader：创建style标签，把css写入标签</li>
+</ul>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">zou liang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/02/25/webPack/">http://example.com/2022/02/25/webPack/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/25/hello-world/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zou liang</div><div class="author-info__description">技术源于生活</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#webPack-%E7%9B%B8%E5%BA%94%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84-%E7%9B%B8%E5%BA%94%E7%9A%84%E9%85%8D%E7%BD%AE%E9%83%BD%E5%9C%A8-%E8%A7%A3%E9%94%81-Webpack-%E9%87%8D%E7%82%B9%E4%B8%AD"><span class="toc-number">1.</span> <span class="toc-text">webPack 相应知识点的(相应的配置都在 解锁 Webpack 重点中 )</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#happypack"><span class="toc-number">2.</span> <span class="toc-text">happypack</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#webPack%E4%B8%ADlaoder%E5%AF%B9css%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">webPack中laoder对css的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Loader-%E7%9A%84%E4%BD%9C%E7%94%A8-%E6%A8%A1%E5%9D%97%E8%BD%AC%E6%8D%A2%E5%99%A8%EF%BC%8C%E5%B0%86%E9%9D%9EJS%E6%A8%A1%E5%9D%97%E8%BD%AC%E5%8C%96%E4%B8%BAwebPack%E8%83%BD%E8%AF%86%E5%88%AB%E7%9A%84JS%E6%A8%A1%E5%9D%97"><span class="toc-number">3.0.1.</span> <span class="toc-text">Loader 的作用: 模块转换器，将非JS模块转化为webPack能识别的JS模块</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Piugin"><span class="toc-number">3.0.2.</span> <span class="toc-text">Piugin</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/02/25/webPack/" title="webPackBase"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="webPackBase"/></a><div class="content"><a class="title" href="/2022/02/25/webPack/" title="webPackBase">webPackBase</a><time datetime="2022-02-25T07:26:53.491Z" title="Created 2022-02-25 15:26:53">2022-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/25/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/02/25/hello-world/" title="Hello World">Hello World</a><time datetime="2022-02-25T05:40:56.238Z" title="Created 2022-02-25 13:40:56">2022-02-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By zou liang</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
